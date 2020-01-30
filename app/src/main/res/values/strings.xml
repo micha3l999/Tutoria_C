@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Tutoria Contabilidad</string>
+
+    <string name="main_tittle">Sistema de Costos</string>
+    <string name="tittle_MP">Materia Prima</string>
+    <string name="tittle_MO">Mano de obra</string>
+    <string name="tittle_CI">Costos Indirectos</string>
+    <string name="tittle_CT">Costo Total</string>
+
+    <!-- Materia Prima-->
+    <string name="tittleMP">Materiales</string>
+    <string name="material">Nombre</string>
+    <string name="quantity">Unidades</string>
+    <string name="unitPrice">Precio Unitario</string>
+    <string name="totalPrice">Precio Total:</string>
+    <string name="calMP">Calcular Materia Prima</string>
+    <string name="addMaterial">Añadir Material</string>
+    <string name="calTotalPrice">Calcular</string>
+    <string name="totalMP">Total Materia Prima:</string>
+
+    <!-- Total-->
+    <string name="total">Total</string>
+</resources>
