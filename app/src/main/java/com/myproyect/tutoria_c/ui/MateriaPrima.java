@@ -63,6 +63,7 @@ public class MateriaPrima extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btCalMP).setOnClickListener(this);
         findViewById(R.id.btAddMaterial).setOnClickListener(this);
         findViewById(R.id.btCalTotalPrice).setOnClickListener(this);
+        findViewById(R.id.btReturnHome).setOnClickListener(this);
     }
 
     @Override
@@ -115,6 +116,8 @@ public class MateriaPrima extends AppCompatActivity implements View.OnClickListe
                     totalMP = totalMP + materiales.get(i).getPrecioTotal();
                 }
                 tvTotalMp.setText(String.valueOf(totalMP));
+            case R.id.btReturnHome:
+                finish();
             default:
                 break;
         }

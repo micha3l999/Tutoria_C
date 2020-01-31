@@ -12,6 +12,8 @@ import com.myproyect.tutoria_c.ui.ManoObra;
 import com.myproyect.tutoria_c.ui.MateriaPrima;
 import com.myproyect.tutoria_c.ui.Totales;
 
+import io.paperdb.Paper;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button button1, button2, button3, button4;
@@ -20,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Paper.init(this);
         initComponents();
         setListener();
     }
@@ -47,17 +49,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent = MateriaPrima.callingIntent(MainActivity.this);
                 startActivity(intent);
                 break;
-            case R.id.button2:
-                Intent intentMO = ManoObra.callingIntent(MainActivity.this);
-                startActivity(intentMO);
-                break;
             case R.id.button3:
                 Intent intentCI = CostosIndirectos.callingIntent(MainActivity.this);
                 startActivity(intentCI);
-                break;
-            case R.id.button4:
-                Intent intentT = Totales.callingIntent(MainActivity.this);
-                startActivity(intentT);
                 break;
             default:
                 break;

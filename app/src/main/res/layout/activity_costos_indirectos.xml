@@ -14,7 +14,6 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="65dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginBottom="12dp"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +35,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -54,11 +53,11 @@
                         android:textSize="@dimen/tittleForm" />
 
                     <EditText
-                        android:id="@+id/editText2"
+                        android:id="@+id/etRent"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:inputType="numberDecimal" />
 
                     <TextView
                         android:id="@+id/textView24"
@@ -68,11 +67,11 @@
                         android:textSize="@dimen/tittleForm" />
 
                     <EditText
-                        android:id="@+id/editText3"
+                        android:id="@+id/etServices"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:inputType="numberDecimal" />
 
                     <TextView
                         android:id="@+id/textView25"
@@ -82,11 +81,11 @@
                         android:textSize="@dimen/tittleForm" />
 
                     <EditText
-                        android:id="@+id/editText4"
+                        android:id="@+id/etInternet"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:inputType="numberDecimal" />
 
                     <TextView
                         android:id="@+id/textView26"
@@ -96,11 +95,11 @@
                         android:textSize="@dimen/tittleForm" />
 
                     <EditText
-                        android:id="@+id/editText5"
+                        android:id="@+id/etDepreciation"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:inputType="numberDecimal" />
 
                     <TextView
                         android:id="@+id/textView27"
@@ -110,11 +109,11 @@
                         android:textSize="@dimen/tittleForm" />
 
                     <EditText
-                        android:id="@+id/editText6"
+                        android:id="@+id/etGuard"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:inputType="numberDecimal" />
 
                     <TextView
                         android:id="@+id/textView28"
@@ -124,15 +123,15 @@
                         android:textSize="@dimen/tittleForm" />
 
                     <EditText
-                        android:id="@+id/editText7"
+                        android:id="@+id/etSecretary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:inputType="numberDecimal" />
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/textView29"
+                    android:id="@+id/tvCIF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
@@ -146,7 +145,7 @@
                     android:layout_marginTop="35dp">
 
                     <Button
-                        android:id="@+id/btCalTotalPrice"
+                        android:id="@+id/btCalCI"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="160dp"
@@ -160,18 +159,20 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
-                        android:id="@+id/returnHome"
+                        android:id="@+id/btReturnHome"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="28dp"
                         android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="15dp"
                         android:background="@drawable/drawable_button_border"
                         android:paddingStart="5dp"
                         android:paddingEnd="5dp"
                         android:text="@string/returnHome"
                         android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/btCalTotalPrice" />
+                        app:layout_constraintTop_toBottomOf="@+id/btCalCI" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
