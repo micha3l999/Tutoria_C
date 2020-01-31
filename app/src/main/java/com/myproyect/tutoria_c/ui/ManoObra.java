@@ -22,7 +22,7 @@ public class ManoObra extends AppCompatActivity {
      * @return
      */
     public static Intent callingIntent (final Context context) {
-        Intent mIntent = new Intent(context, MateriaPrima.class);
+        Intent mIntent = new Intent(context, ManoObra.class);
         return mIntent;
     }
 }

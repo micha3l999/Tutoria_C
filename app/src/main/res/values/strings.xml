@@ -17,7 +17,18 @@
     <string name="addMaterial">Añadir Material</string>
     <string name="calTotalPrice">Calcular</string>
     <string name="totalMP">Total Materia Prima:</string>
+    
+    <!-- Costos indirectos de fabricación-->
+    <string name="rent">Arriendos</string>
+    <string name="basicServices">Servicios Básicos</string>
+    <string name="internet">Internet</string>
+    <string name="depreciation">Depreciación de maquinarias y equipos</string>
+    <string name="guard">Guardianía</string>
+    <string name="secretary">Secretaría</string>
+    <string name="calCI">Calcular Costos Indirectos</string>
+    <string name="totalCI">Total de los Costos Indirectos de fabricación:</string>
 
-    <!-- Total-->
+    <!-- global-->
     <string name="total">Total</string>
+    <string name="returnHome">Regresar</string>
 </resources>

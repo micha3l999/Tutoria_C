@@ -21,8 +21,6 @@ public class MateriaPrima extends AppCompatActivity implements View.OnClickListe
     private EditText etName, etQuantity, etUnitPrice;
     private TextView tvTotalPrice, tvTotalMp;
     private Button btCalTotalPrice, btCalTotalMP, btAddMaterial;
-    private float price, total;
-    private Integer quantity;
     private ArrayList<Material> materiales = new ArrayList<>();
 
 
@@ -70,22 +68,29 @@ public class MateriaPrima extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(final View v) {
         String sQuantity, sPrice, sName;
+        float price = 0, total = 0, totalMP = 0;
+        int quantity = 0;
         switch (v.getId()) {
             case R.id.btCalTotalPrice:
                 //consigo los datos de los campos de ingreso y muestro el valor total de un material
                 sQuantity = etQuantity.getText().toString();
-                quantity = Integer.parseInt(sQuantity);
                 sPrice = etUnitPrice.getText().toString();
-                price = Float.parseFloat(sPrice);
-                total = quantity*price;
+                if (!sQuantity.equals("") && !sPrice.equals("")) {
+                    quantity = Integer.parseInt(sQuantity);
+                    price = Float.parseFloat(sPrice);
+                    total = quantity*price;
+                }
                 tvTotalPrice.setText(String.valueOf(total));
                 break;
             case R.id.btAddMaterial:
                 //consigo los datos de los campos de ingreso y guardo el material en una lista
                 sQuantity = etQuantity.getText().toString();
-                quantity = Integer.parseInt(sQuantity);
                 sPrice = etUnitPrice.getText().toString();
-                price = Float.parseFloat(sPrice);
+                if (!sQuantity.equals("") && !sPrice.equals("")) {
+                    quantity = Integer.parseInt(sQuantity);
+                    price = Float.parseFloat(sPrice);
+                }
+
                 total = quantity*price;
                 sName = etName.getText().toString();
                 Material material = new Material(sName, quantity, price, total);
@@ -98,13 +103,18 @@ public class MateriaPrima extends AppCompatActivity implements View.OnClickListe
                 tvTotalPrice.setText("");
                 break;
             case R.id.btCalMP:
-                //se calcula el total de la materia prima recorriendo la lista de materiales
-                float totalMp = 0;
-                for (int i = 0; i < materiales.size(); i++) {
-                    totalMp = totalMp + materiales.get(i).getPrecioTotal();
+                sQuantity = etQuantity.getText().toString();
+                sPrice = etUnitPrice.getText().toString();
+                if (!sQuantity.equals("") && !sPrice.equals("")) {
+                    quantity = Integer.parseInt(sQuantity);
+                    price = Float.parseFloat(sPrice);
+                    totalMP = quantity*price;
                 }
-                String total = String.valueOf(totalMp);
-                tvTotalMp.setText(total);
+                //se calcula el total de la materia prima recorriendo la lista de materiales
+                for (int i = 0; i < materiales.size(); i++) {
+                    totalMP = totalMP + materiales.get(i).getPrecioTotal();
+                }
+                tvTotalMp.setText(String.valueOf(totalMP));
             default:
                 break;
         }
